@@ -889,7 +889,7 @@ if (heroRole) setTimeout(() => scrambleText(heroRole), 220);
 (() => {
   const cover = $('cover');
   const navLinks = [...document.querySelectorAll('.nav a[href^="#"]')];
-  const secs = navLinks.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  const secs = navLinks.map(a => $(a.getAttribute('href').slice(1))).filter(Boolean);
   let sRaf = 0;
   function onScroll(){
     sRaf = 0;
